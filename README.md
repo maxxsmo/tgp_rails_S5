@@ -1,24 +1,19 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## projet :
 
-Things you may want to cover:
+Première appli en Rails qui reprend le concept d'application de The Gossip Project.
 
-* Ruby version
+## fonctionnement 
 
-* System dependencies
+- Cloner le repository + lancer l'appli
+- `$ rails db:migrate`
+- `$ rails db:seed`
+- `$ rails server`
+- go à l'URL :localhost:3000/home
+- enjoy ;)
 
-* Configuration
+## team :
 
-* Database creation
+Nassri Hamdi & Maxime Smolis.
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
