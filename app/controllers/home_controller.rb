@@ -1,4 +1,4 @@
-class HomeController < ApplicationController
+codeclass HomeController < ApplicationController
   def index
     @user_by_name = params[:user_by_name]
   end
