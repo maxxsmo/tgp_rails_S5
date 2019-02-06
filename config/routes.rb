@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     resources :user
   end
   
-
+  resources :city
   resources :team
   resources :contact
   

@@ -8,7 +8,7 @@
     <li>Date de création: <%= @gossip.created_at.strftime("%Y-%m-%d")%></li>
     <li>Heure de création: <%= @gossip.created_at.strftime("%Hh%M")%></li>
     <li>L'auteur:<a href="<%=  @gossip.id %>/user/<%=  @gossip.user_id%>"> <%=  @gossip.user.first_name%></a></li>
-    <li>Ville: <%= @gossip.user.first_name%></li>
+    <li>Ville: <%= link_to @gossip.user.city.name, city_path(@gossip.user.city.id)%></li>
     <a><%= link_to 'modifier', edit_gossip_path(@gossip.id), class: "btn btn-success" %></a>
     <a href="<%= gossip_path(@gossip.id)%>" class="btn btn-danger" data-confirm="êtes vous sur ?" data-method="DELETE" >supprimer</a>
     

@@ -1,0 +1,20 @@
+<h1>La ville de <%= @city.name%></h1>
+</br>
+<h2>Les potins</h2>
+</br>
+<div class="row justify-content-around">
+    <%@city.users.all.each do |user| %>
+    <%user.gossips.all.each do |gossip| %>
+      <div class="col-sm-3 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title text-center"><%= gossip.title %></h5>
+            <p class="card-text text-center"><%= gossip.content%></p>
+            <%# <a href="#" class="btn btn-primary">Go somewhere</a> %>
+          </div>
+        </div>
+      </div>
+    <% end%>
+    <% end%>
+  </div>
+
