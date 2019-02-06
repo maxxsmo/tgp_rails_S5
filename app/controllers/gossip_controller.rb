@@ -22,19 +22,27 @@ class GossipController < ApplicationController
   
 
   def edit
+    @gossip = Gossip.find(params["id"])
   end
   
   def show
-    @gossip_id = Gossip.find(params["id"])
+    @gossip = Gossip.find(params[:id])
   end
 
   def update
+    @gossip = Gossip.find(params["id"])
+    if  @gossip.update(title: params["title"], content: params["content"])
+      redirect_to '/home', notice: "Gossip successfully modified! "
+    else 
+      render 'edit'
+    end
   end
 
   def destroy
+    @gossip = Gossip.find(params[:id])
+    @gossip.destroy
+    redirect_to '/home'
   end
 
-  def gossip_author
-    @author = User.find(params["user_id"])
-  end
+  
 end

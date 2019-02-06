@@ -1,0 +1,35 @@
+<div class="container">
+  <h1>Tu veux changer ton ragot?</h1>
+  </br>
+
+  <% if @gossip.errors.any? %>
+      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      title or content is missing!
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      </div>
+  <% end %>
+
+  
+  <%= form_tag url_for(action: 'update'), method: "patch" do %>
+          <div class="form-group">
+        <%= label_tag 'Title' %>
+          <%= text_field_tag 'title', @gossip.title, class: 'form-control'%>
+          </div>
+          <div class="form-group">
+          <%= label_tag 'Content' %>
+          <%= text_area_tag 'content', @gossip.content, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+          <button type="submit" class="btn btn-primary">Envoyer</button>
+          </div>
+  <% end %>
+
+
+  
+
+
+      
+          
+</div>
