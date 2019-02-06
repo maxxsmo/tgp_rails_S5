@@ -1,4 +1,4 @@
 class TeamController < ApplicationController
-  def members
+  def index
   end
 end
